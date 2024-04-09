@@ -11,6 +11,8 @@ fun main() {
 }
 
 fun Application.module() {
+    val httpClient = configureHttpClient()
     configureSecurity()
-    configureRouting()
+    configureRouting(httpClient)
+
 }
